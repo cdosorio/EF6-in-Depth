@@ -1,7 +1,8 @@
 using System.Data.Entity;
-using Queries.EntityConfigurations;
+using LINQ.EntityConfigurations;
+using Models;
 
-namespace Queries
+namespace EF6
 {
     public class PlutoContext : DbContext
     {

@@ -1,6 +1,7 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using Models;
+using System.Data.Entity.ModelConfiguration;
 
-namespace Queries.EntityConfigurations
+namespace LINQ.EntityConfigurations
 {
     public class CourseConfiguration : EntityTypeConfiguration<Course>
     {

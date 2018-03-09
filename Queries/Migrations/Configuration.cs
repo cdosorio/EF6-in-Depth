@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Queries.Migrations
+namespace LINQ.Migrations
 {
+    using EF6;
+    using Models;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<PlutoContext>
