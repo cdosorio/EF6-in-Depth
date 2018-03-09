@@ -6,7 +6,8 @@ using System.Linq;
 namespace LoadingRelated
 {
     /// <summary>
-    /// Problema N+1
+    /// Problema N+1 (aunque en este ejemplo no son 1+16 queries, ya que para los 16 cursos solo son 4 autores, 
+    /// y como las queries se van guardando en cache del dbContext, solo se ejecutan 1+4
     /// </summary>
     class LazyLoading
     {
