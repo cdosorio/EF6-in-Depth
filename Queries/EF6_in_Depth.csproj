@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadingRelatedObjects\LazyLoading.cs" />
     <Compile Include="LoadingRelatedObjects\EagerLoading.cs" />
     <Compile Include="LoadingRelatedObjects\ExplicitLoading.cs" />
     <Compile Include="Models\Author.cs" />
