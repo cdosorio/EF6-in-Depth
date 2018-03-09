@@ -1,4 +1,4 @@
-﻿namespace Queries
+﻿namespace Models
 {
     public class Cover
     {

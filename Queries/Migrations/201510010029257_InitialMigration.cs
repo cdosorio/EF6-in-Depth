@@ -1,4 +1,4 @@
-namespace Queries.Migrations
+namespace LINQ.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

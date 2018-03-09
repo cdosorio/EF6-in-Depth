@@ -7,8 +7,8 @@
     <ProjectGuid>{D1776DED-C59A-4F8A-8C31-96EAE15BDF5A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Queries</RootNamespace>
-    <AssemblyName>Queries</AssemblyName>
+    <RootNamespace>EF6</RootNamespace>
+    <AssemblyName>EF6</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Queries.LINQ.Exercises</StartupObject>
+    <StartupObject>LoadingRelated.ExplicitLoading</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadingRelatedObjects\EagerLoading.cs" />
+    <Compile Include="LoadingRelatedObjects\ExplicitLoading.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Cover.cs" />

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Queries
+namespace Models
 {
     public class Author
     {
@@ -14,5 +14,6 @@ namespace Queries
         public string Name { get; set; }
 
         public virtual ICollection<Course> Courses { get; set; }
+        public object Address { get; internal set; }
     }
 }

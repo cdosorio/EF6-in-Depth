@@ -1,8 +1,9 @@
 ﻿
+using EF6;
 using System;
 using System.Linq;
 
-namespace Queries
+namespace LINQ
 {
     class ExtensionMethods
     {
