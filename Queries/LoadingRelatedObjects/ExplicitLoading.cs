@@ -16,21 +16,19 @@ namespace LoadingRelated
     {
         static void Main(string[] args)
         {
-            Example1();
-            //InOperator();
+            //LoadRelatedToOneEntity();
+            LoadRelatedToMultipleEntities();
         }
 
-        private static void Example1()
+        private static void LoadRelatedToOneEntity()
         {
             var context = new PlutoContext();
 
             var author = context.Authors.Single(a => a.Id == 1);
-
-            //Mosh way
-            //context.Courses.Where(c => c.AuthorId == author.Id).Load();
-
-            //con Filtro
-            context.Courses.Where(c => c.AuthorId == author.Id && c.FullPrice== 0).Load();
+                        
+            //Ademas se muestra como aplicar Filtro (FullPrice)
+            context.Courses.Where(c => c.AuthorId == author.Id && c.FullPrice == 0).Load();
+            Console.WriteLine("Cantidad={0}", author.Courses.Count);
 
             foreach (var course in author.Courses)
             {
@@ -39,8 +37,8 @@ namespace LoadingRelated
 
             Console.ReadKey();
         }
-
-        private static void InOperator()
+              
+        private static void LoadRelatedToMultipleEntities()
         {
             var context = new PlutoContext();
 
@@ -48,6 +46,7 @@ namespace LoadingRelated
             var authorIds = authors.Select(a => a.Id);
 
             //devuelve los cursos que están en cierta lista de autores 
+            //Equivalente a usar el Operador IN de SQL
             context.Courses.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
             
             foreach (var a in authors)

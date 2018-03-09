@@ -80,6 +80,12 @@
       <DependentUpon>201510010029257_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vidzy\Vidzy.csproj">
+      <Project>{2AEE16B3-AFD2-4C91-9751-E37310E4689C}</Project>
+      <Name>Vidzy</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
