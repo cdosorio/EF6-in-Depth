@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Vidzy
 {
@@ -11,11 +12,26 @@ namespace Vidzy
         public Genre Genre { get; set; }
         public byte GenreId { get; set; }
         public Classification Classification { get; set; }
-        public ICollection<Tag> Tags { get; private set; }
+        public virtual ICollection<Tag> Tags { get; private set; }
 
         public Video()
         {
             Tags = new HashSet<Tag>();
+        }
+
+        public void AddTag(Tag tag)
+        {
+            Tags.Add(tag);
+        }
+
+        public void RemoveTag(string tagName)
+        {
+            // I'm using SingleOrDefault here because the given tag may not be associated with the given video
+            // in the first place!
+            var tag = Tags.SingleOrDefault(t => t.Name.Equals(tagName, StringComparison.CurrentCultureIgnoreCase));
+
+            if (tag != null)
+                Tags.Remove(tag);
         }
     }
 }

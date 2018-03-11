@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Vidzy
 {
-    class Exercises_LINQ
+    class LINQ
     {
         static void Main(string[] args)
         {

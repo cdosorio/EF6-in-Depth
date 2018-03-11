@@ -1,10 +1,5 @@
 ﻿using Models;
-using System.Data.Entity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EF6.CRUD
 {
@@ -20,12 +15,12 @@ namespace EF6.CRUD
                 Description = "new descr",
                 FullPrice = 19.95f,
                 Level = 1,
-                AuthorId = 1
+                AuthorId = 1, //using FK properties, better for web apps
+                //Author = context.Authors.Single(a => a.Id == 1) //Using an existing object in context
             };
 
             context.Courses.Add(course);
-            context.SaveChanges();
-            
+            context.SaveChanges();            
         }
     }
 }

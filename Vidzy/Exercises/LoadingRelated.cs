@@ -10,7 +10,7 @@ namespace Vidzy
     /// Lazy Loading no recomendado para WEB
     /// Explicit Loading para simplicar queries muy complejas de Eager Loading, o cargar data condicionalmente
     /// </summary>
-    class Exercises_LoadingRelated
+    class LoadingRelated
     {
         static void Main(string[] args)
         {
