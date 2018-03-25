@@ -11,6 +11,8 @@ namespace EF6
         {
             //Recomendable para web apps. Reemplaza al uso de virtual
             this.Configuration.LazyLoadingEnabled = false;
+
+            //cosoriob edit
         }
 
         public virtual DbSet<Author> Authors { get; set; }
