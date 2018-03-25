@@ -13,6 +13,7 @@ namespace EF6
             this.Configuration.LazyLoadingEnabled = false;
 
             //cosoriob edit
+            //cosoriob edit en branch para_PR
         }
 
         public virtual DbSet<Author> Authors { get; set; }
